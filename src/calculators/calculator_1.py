@@ -21,4 +21,4 @@ class Calculator1:
         return input_data
 
 
-        #TREOPA DO TESTETESTETESTE
+print("Teste to gcp")

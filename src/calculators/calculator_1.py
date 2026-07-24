@@ -20,5 +20,3 @@ class Calculator1:
         input_data = body["number"]
         return input_data
 
-
-print("TESTETOTAL")

@@ -21,4 +21,4 @@ class Calculator1:
         return input_data
 
 
-print("Teste to gcp")
+print("TESTETOTAL")

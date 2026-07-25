@@ -1,24 +1,47 @@
 from flask import request as FlaskRequest
+import math
 
 class Calculator1:
 
     """
     The first part is divided by 4, and the result is added to 7.
     After that, the result is squared and multiplied by a value of 0.257
+
+    A segunda parte é elevada a pontência de 2.121, dividida por 5 e somado a 1
+
+
+    A terceira parte se mantem no mesmo valor.
+
     """
     
 
     def calculate(self, request: FlaskRequest) -> Dict:
         body = request.json
         input_data = self.__validate_body(body)
-        print(input_data)
+
+        splited_number = input_data / 3
+
+        first_process_result = self.__first_process(splited_number)
+        second_process_result = self.__second_process(first_process_result)
     
     def __validate_body(self, body: Dict) -> float:
         if "number" not in body:
-            raise Exception("Body mal formatado")
+            raise Exception("Bad request")
 
         input_data = body["number"]
         return input_data
 
+    
+    def __first_process(self, first_number: float) -> float:
+        return (((first_number / 4) + 7) * 0.257)
 
-print("TESTESTESTES")
+
+    def __second_process(self, first_process_number: float) -> float:
+        return (((math.pow(first_process_number, 4)) / 5) + 1)
+
+
+    
+
+    
+
+        

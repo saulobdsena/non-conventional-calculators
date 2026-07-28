@@ -1,5 +1,5 @@
 from flask import request as FlaskRequest
-import math
+from typing import Dict
 
 class Calculator1:
 
@@ -7,11 +7,9 @@ class Calculator1:
     The first part is divided by 4, and the result is added to 7.
     After that, the result is squared and multiplied by a value of 0.257
 
-    A segunda parte é elevada a pontência de 2.121, dividida por 5 e somado a 1
+    he second part is raised to the power of 2,121, divided by 5, and 1 is added to it.
 
-
-    A terceira parte se mantem no mesmo valor.
-
+    The third part remains at the same value.
     """
     
 

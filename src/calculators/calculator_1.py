@@ -37,11 +37,17 @@ class Calculator1:
 
     
     def __first_process(self, first_number: float) -> float:
-        return (((first_number / 4) + 7) * 0.257)
+
+        first_part = (first_number / 4) + 7
+        second_part = (first_part ** 2) * 0.257
+
+        return second_part
 
 
-    def __second_process(self, first_process_number: float) -> float:
-        return (((math.pow(first_process_number, 4)) / 5) + 1)
+    def __second_process(self, second_number: float) -> float:
+        first_part = (second_number ** 2.121)
+        second_part = (first_part / 5) + 1
+        return second_part
 
     def __format_response(self, calc_result: float) -> Dict:
         return {

@@ -55,4 +55,3 @@ class Calculator1:
             }
         }
 
-        prin("saulo teste teste")

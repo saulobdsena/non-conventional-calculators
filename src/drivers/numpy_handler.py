@@ -6,3 +6,5 @@ class NumpyHandler:
 
     def standard_derivation(self, numbers):
         return self.__np.std(numbers)
+
+        print("saulo")

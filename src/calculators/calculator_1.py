@@ -54,8 +54,3 @@ class Calculator1:
                 "result": calc_result
             }
         }
-    
-
-    
-
-        

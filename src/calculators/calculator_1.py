@@ -1,4 +1,4 @@
-from flask import request as FlaskRequest
+from flask import Request
 from typing import Dict
 
 class Calculator1:
@@ -7,13 +7,12 @@ class Calculator1:
     The first part is divided by 4, and the result is added to 7.
     After that, the result is squared and multiplied by a value of 0.257
 
-    he second part is raised to the power of 2,121, divided by 5, and 1 is added to it.
+    The second part is raised to the power of 2.121, divided by 5, and 1 is added to it.
 
     The third part remains at the same value.
     """
-    
 
-    def calculate(self, request: FlaskRequest) -> Dict:
+    def calculate(self, request: Request) -> Dict:
         body = request.json
         input_data = self.__validate_body(body)
 
@@ -27,7 +26,7 @@ class Calculator1:
         return response
 
     def __validate_body(self, body: Dict) -> float:
-        if "number" not in body:
+        if not body or "number" not in body:
             raise Exception("Bad request")
 
         input_data = body["number"]

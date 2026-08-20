@@ -1,7 +1,7 @@
 
 from src.calculators.calculator_1 import Calculator1
 from typing import Dict
-from pytest import raises
+from pytest import raises, approx
 
 class MockRequest:
     def __init__(self, body: Dict) -> None:
@@ -19,7 +19,7 @@ def test_calculate():
     assert "Calculator" in response['data']
     assert "result" in response["data"]
 
-    assert response["data"]["result"] == 14.24740748999224
+    assert response["data"]["result"] == approx(14.24740748999224)
 
 def test_calculate_with_body_error():
     mock_request = MockRequest(body={ "something" : 1})
